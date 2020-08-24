@@ -1,0 +1,18 @@
+{
+  "name": "Brandeis Daily Assessment Autofill",
+  "version": "638",
+  "manifest_version": 2,
+  "background":{
+    "scripts": ["background.js"]
+  },
+  "icons": { "16": "facemask.png",
+    "48": "facemask.png",
+    "128": "facemask.png"},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "author": "Matthew Merovitz",
+  "browser_action": {
+    "default_title": "Brandeis Daily Assessment Autofill",
+    "default_popup":"popup.html"
+  },
+  "permissions": ["contextMenus", "tabs", "<all_urls>", "activeTab", "storage"]
+}
