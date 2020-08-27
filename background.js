@@ -6,7 +6,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status == 'complete' && tab.url.includes('https://slate.brandeis.edu/portal/brandeis_covid19')) {
-    var conf = confirm("Do you want to take the daily health assessment?")
+    var conf = confirm("Would you like me to complete the daily health assessment for you?")
     if (conf) {
       chrome.tabs.executeScript(tab.id,{file: "Open.js"},function(results){chrome.tabs.update(tab.id,{active:true});});
     }
